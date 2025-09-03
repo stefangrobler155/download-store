@@ -1,0 +1,16 @@
+/*download-btn from App.css */
+.download-btn {
+  background: var(--success-accent); /* hsl(145, 63%, 50%) */
+  color: var(--light-text);
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  min-height: 44px;
+}
+
+.download-btn:hover {
+  background: var(--success-accent-dark); /* hsl(145, 63%, 30%) */
+}

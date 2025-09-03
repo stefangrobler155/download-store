@@ -1,0 +1,138 @@
+/* ===== NAVBAR STYLES ===== */
+.navbar {
+  background-color: var(--dark-bg);
+  padding: var(--space-md) var(--space-lg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  color: var(--light-text);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  text-decoration: none;
+}
+
+/* Mobile menu button (hidden on desktop) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--light-text);
+  font-size: var(--text-2xl);
+  cursor: pointer;
+}
+
+/* Navigation links */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-light);
+}
+
+.nav-link {
+  color: var(--light-text);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+/* Cart counter bubble */
+.cart-count {
+  background-color: var(--accent);
+  color: var(--light-text);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  padding: 0.1rem 0.5rem;
+  font-size: var(--text-sm);
+  margin-left: 0.3rem;
+}
+
+/* Logout button style */
+.logout-btn {
+  background: none;
+  border: none;
+  color: var(--light-text);
+  cursor: pointer;
+  font: inherit;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Make sure icons don't affect button alignment */
+.nav-link, .logout-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Mobile icon adjustments */
+@media (max-width: 768px) {
+  .icon {
+    margin-right: 1rem;
+    min-width: 24px; /* Prevents layout shift */
+  }
+  
+  .nav-link, .logout-btn {
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+}
+
+
+/* ===== MOBILE STYLES ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-bg);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    clip-path: circle(0% at 90% -10%);
+    transition: clip-path 0.4s ease;
+  }
+
+  .nav-menu.active {
+    clip-path: circle(150% at 90% -10%);
+  }
+
+  .nav-menu li {
+    padding: 0.8rem 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #333;
+  }
+}

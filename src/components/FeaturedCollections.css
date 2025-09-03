@@ -1,0 +1,44 @@
+/* Featured Collections */
+
+.featured-collections {
+  padding: 0 var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.featured-collections h2 {
+  text-align: left;
+  margin-bottom: var(--space-lg);
+  font-family: var(--font-heading);
+  color: var(--light-text);
+  font-size: var(--text-heading);
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.collection-card {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  background: var(--dark-bg-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  padding: .5rem;
+  color: var(--accent);
+  border: .5rem solid var(--light-bg);
+}
+
+.collection-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+}
+
+.collection-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}

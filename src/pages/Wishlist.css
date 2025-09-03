@@ -1,0 +1,12 @@
+.wishlist-page{
+    max-width: var(--max-width);
+    min-height: 100vh;
+    padding: var(--space-lg) var(--space-md);
+}
+.page-title {
+  font-size: var(--text-heading);
+  font-weight: var(--weight-semibold);
+  color: var(--light-text);
+  text-align: left;
+  margin-bottom: var(--space-lg);
+}

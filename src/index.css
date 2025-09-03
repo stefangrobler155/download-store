@@ -1,0 +1,182 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+  /* ===== Base Colors ===== */
+  --dark-bg: #111111;          /* Almost black */
+  --light-bg: #f9f9f9;         /* Soft white */
+  --accent: rgb(197, 168, 128);           /* Muted gold */
+  --secondary-accent: hsl(355, 78%, 50%); /* Soft blue */
+  --success-accent: hsl(145, 63%, 50%);        /* Green for success messages */
+  --dark-text: #1a1a1a;        /* Dark gray for text */
+  --light-text: #f5f5f5;       /* Near white for text */
+  --overlay: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+
+  /* ===== Dark BG Variations ===== */
+  --dark-bg-light: #1c1c1c; /* For cards or subtle separation */
+  --dark-bg-lighter: #2a2a2a; /* Hover backgrounds */
+  --dark-bg-hover: #0d0d0d; /* Button hovers on dark bg */
+
+  /* ===== Light BG Variations ===== */
+  --light-bg-dark: #e6e6e6; /* Borders, muted backgrounds */
+  --light-bg-darker: #d9d9d9; /* Hover states */
+  --light-bg-hover: #ffffff; /* Hover on light cards */
+
+  /* ===== Accent Gold Variations ===== */
+  --accent-light: #d4b98f; /* Hover or highlights */
+  --accent-dark: #a88c5f;  /* Active states or shadows */
+
+  /* ===== Secondary red Variations ===== */
+  --secondary-accent-light: hsl(355, 78%, 80%); /* Button hover */
+  --secondary-accent-dark: hsl(355, 78%, 30%);  /* Pressed button */
+  /* ===== Secondary green Variations ===== */
+  --success-accent-light: hsl(145, 63%, 80%); /* Button hover */
+  --success-accent-dark: hsl(145, 63%, 30%);  /* Pressed button */
+
+  /* ===== Text Variations ===== */
+  --text-muted: #777777; /* Less important text */
+  --text-subtle: #999999; /* Captions, small notes */
+  
+  /* Font Families */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Lora', serif;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;   /* 12px */
+  --text-sm: 0.875rem;  /* 14px */
+  --text-base: 1rem;    /* 16px */
+  --text-lg: 1.125rem;  /* 18px */
+  --text-xl: 1.25rem;   /* 20px */
+  --text-2xl: 1.5rem;   /* 24px */
+  --text-3xl: 1.875rem; /* 30px */
+  --text-4xl: 2.25rem;  /* 36px */
+  --text-5xl: 3rem;     /* 48px */
+  --text-heading: var(--text-3xl);
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Line Heights */
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-loose: 1.75;
+  
+  /* Spacing */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  
+  /* Borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* Shadow */
+  --box-shadow: 0 2px 8px rgba(197, 168, 128, .3);
+  --box-shadow-hover: 0 4px 12px rgba(197, 168, 128, .6);
+
+  /* Max Width */
+  --max-width: 1200px; /* Main container max width */
+}
+
+/* ===== BASE STYLES ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--base-size);
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--light-text);
+  background-color: var(--dark-bg);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+/* input, select, textarea {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--dark-text);
+  background-color: var(--light-bg);
+  border: 1px solid var(--light-bg-dark);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  transition: border-color 0.2s ease;
+} */
+/* ===== UTILITY CLASSES ===== */
+/* Text Utilities */
+.text-center { text-align: center; }
+.text-uppercase { text-transform: uppercase; }
+.text-accent { color: var(--accent); }
+
+/* Spacing Utilities */
+.mt-1 { margin-top: var(--space-sm); }
+.mt-2 { margin-top: var(--space-md); }
+.mt-3 { margin-top: var(--space-lg); }
+
+.pb-1 { padding-bottom: var(--space-sm); }
+.pb-2 { padding-bottom: var(--space-md); }
+.pb-3 { padding-bottom: var(--space-lg); }
+/* Add similar for mb, ml, mr, mx, my, p* */
+
+/* Flex Utilities */
+.flex { display: flex; }
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button Utilities */
+.btn {
+  padding: clamp(0.5rem, 1vh, 1rem) clamp(2rem, 4vw, 3rem);
+  background-color: var(--accent);
+  color: var(--dark-text);
+  border: none;
+  border-radius: 4px;
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--accent);
+  color: var(--dark-text);
+}
+.btn-primary:hover {
+  background-color: var(--light-bg);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--light-bg);
+  color: var(--dark-text);
+}
+.btn-secondary:hover {
+  background-color: var(--accent);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--light-text);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  padding: 0.5rem 1rem;
+}
+.btn-outline:hover {
+  background-color: var(--accent);
+  color: var(--dark-text);
+  transform: translateY(-2px);
+}

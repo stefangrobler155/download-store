@@ -1,0 +1,218 @@
+/* ===== DASHBOARD STYLES ===== */
+
+/* Main dashboard page */
+.dashboard-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  background: var(--dark-bg);
+  color: var(--light-text);
+  font-family: var(--font-body);
+}
+
+/* Welcome message */
+.welcome-message {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  color: var(--accent); /* Gold accent */
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+/* Section titles */
+.section-title {
+  font-size: var(--text-heading);
+  font-weight: var(--weight-semibold);
+  color: var(--accent); /* Gold accent */
+  margin-bottom: var(--space-md);
+  border-bottom: 2px solid var(--accent-dark);
+  padding-bottom: var(--space-sm);
+}
+
+/* Loading/error/no-data messages */
+.loading-message,
+.error-message,
+.no-data-message {
+  font-size: var(--text-lg);
+  text-align: center;
+  color: var(--text-muted);
+  margin: var(--space-lg) 0;
+}
+
+.error-message {
+  color: var(--secondary-accent); /* Red for errors */
+}
+
+/* Orders section */
+.orders-section {
+  margin-bottom: var(--space-lg);
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--dark-bg-light);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: var(--space-md);
+  text-align: left;
+  border-bottom: 1px solid var(--dark-bg-lighter);
+  color: var(--light-text);
+}
+
+.orders-table th {
+  background: var(--dark-bg-lighter);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  font-size: var(--text-sm);
+  color: var(--accent-light);
+}
+
+.orders-table tr:hover {
+  background: var(--dark-bg-hover);
+}
+
+/* Downloads section Dashboard */
+.downloads-section {
+  margin-bottom: var(--space-lg);
+}
+
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-md);
+}
+
+.order-group {
+  background: var(--dark-bg-light);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--box-shadow);
+}
+
+.order-group-title {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+}
+
+.download-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  background: var(--dark-bg);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--box-shadow-hover);
+  transition: transform 0.3s ease;
+}
+
+.download-card:hover {
+  transform: translateY(-3px);
+}
+
+.download-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--accent-dark);
+}
+
+.download-info {
+  flex: 1;
+}
+
+.download-name {
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--light-text);
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: var(--space-md);
+  }
+
+  .welcome-message {
+    font-size: var(--text-xl);
+  }
+
+  .section-title {
+    font-size: var(--text-xl);
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: var(--space-sm);
+    font-size: var(--text-sm);
+  }
+
+  .orders-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .downloads-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .download-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .download-image {
+    margin-bottom: var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-message {
+    font-size: var(--text-lg);
+  }
+
+  .section-title {
+    font-size: var(--text-lg);
+  }
+
+  .orders-table td {
+    font-size: var(--text-xs);
+  }
+
+  .download-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .download-btn {
+    width: 100%;
+  }
+}
+
+/* Add loading state */
+.download-btn.btn-loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Ensure button aligns in download card */
+.download-card .download-btn {
+  width: 100%;
+  max-width: 200px; /* Limit width for consistency */
+}

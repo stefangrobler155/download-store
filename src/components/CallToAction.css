@@ -1,0 +1,49 @@
+/* CTA Section */
+.cta-section {
+  color: var(--dark-light);
+  padding: 0 var(--space-md);
+  text-align: left;
+  margin-bottom: var(--space-lg);
+}
+.cta-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: var(--space-lg);
+  align-items: start;
+}
+.cta-image-container {
+  width: 100%;
+  display: flex;
+}
+.cta-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: .5rem solid var(--light-bg);
+}
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.cta-title {
+  font-size: var(--text-heading);
+  font-weight: var(--weight-bold);
+  color: var(--light-text);
+}
+.cta-subtitle {
+  font-size: var(--text-xl);
+  color: var(--light-text);
+}
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.col-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: var(--space-lg);
+}
