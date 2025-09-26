@@ -6,21 +6,26 @@ import './FeaturedCollections.css';
 export default function FeaturedCollections() {
   const [categories, setCategories] = useState([]);
   const [error, setError] = useState(null);
-
+  const [loading, setLoading] = useState(true);
+  
   useEffect(() => {
+    setLoading(true);
     const fetchCategories = async () => {
       try {
         const cats = await getCategories();
-        const noUncategorized = cats.filter(cat => cat.slug !== 'uncategorized');
-        const photography = noUncategorized.find(cat => cat.slug === 'photography');
-        const filtered = noUncategorized.filter(cat => cat.parent === photography?.id);
-        setCategories(filtered);
+          const noUncategorized = cats.filter(cat => cat.slug !== 'uncategorized');
+          const photography = noUncategorized.find(cat => cat.slug === 'photography');
+          const filtered = noUncategorized.filter(cat => cat.parent === photography?.id);
+          setCategories(filtered);
       } catch (err) {
         setError(err.message);
+      } finally {
+        setLoading(false);
       }
     };
     fetchCategories();
   }, []);
+  {loading && <div className="loader-overlay"><div className="aperture-loader"></div></div>}
 
   return (
     <section className="featured-collections">
@@ -49,3 +54,5 @@ export default function FeaturedCollections() {
     </section>
   );
 }
+
+

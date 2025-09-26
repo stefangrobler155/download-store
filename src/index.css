@@ -3,9 +3,9 @@
   /* ===== Base Colors ===== */
   --dark-bg: #111111;          /* Almost black */
   --light-bg: #f9f9f9;         /* Soft white */
-  --accent: rgb(197, 168, 128);           /* Muted gold */
-  --secondary-accent: hsl(355, 78%, 50%); /* Soft blue */
-  --success-accent: hsl(145, 63%, 50%);        /* Green for success messages */
+  --accent: #c5a880;           /* Muted gold */
+  --secondary-accent: #e31c2d; /* Red */
+  --success-accent: #2fd072;   /* Green for success messages */
   --dark-text: #1a1a1a;        /* Dark gray for text */
   --light-text: #f5f5f5;       /* Near white for text */
   --overlay: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
@@ -25,11 +25,11 @@
   --accent-dark: #a88c5f;  /* Active states or shadows */
 
   /* ===== Secondary red Variations ===== */
-  --secondary-accent-light: hsl(355, 78%, 80%); /* Button hover */
-  --secondary-accent-dark: hsl(355, 78%, 30%);  /* Pressed button */
+  --secondary-accent-light: #f4a4ab; /* Button hover */
+  --secondary-accent-dark: #88111b;  /* Pressed button */
   /* ===== Secondary green Variations ===== */
-  --success-accent-light: hsl(145, 63%, 80%); /* Button hover */
-  --success-accent-dark: hsl(145, 63%, 30%);  /* Pressed button */
+  --success-accent-light: #acecc7; /* Button hover */
+  --success-accent-dark: #1c7d44;  /* Pressed button */
 
   /* ===== Text Variations ===== */
   --text-muted: #777777; /* Less important text */
@@ -50,6 +50,7 @@
   --text-4xl: 2.25rem;  /* 36px */
   --text-5xl: 3rem;     /* 48px */
   --text-heading: var(--text-3xl);
+  
   /* Font Weights */
   --weight-light: 300;
   --weight-normal: 400;
@@ -101,16 +102,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-heading);
   line-height: 1.2;
 }
-/* input, select, textarea {
-  font-family: var(--font-body);
-  font-size: var(--text-base);
-  color: var(--dark-text);
-  background-color: var(--light-bg);
-  border: 1px solid var(--light-bg-dark);
-  border-radius: var(--radius-sm);
-  padding: var(--space-sm);
-  transition: border-color 0.2s ease;
-} */
+
 /* ===== UTILITY CLASSES ===== */
 /* Text Utilities */
 .text-center { text-align: center; }
