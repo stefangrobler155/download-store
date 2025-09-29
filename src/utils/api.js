@@ -131,10 +131,10 @@ export const loginUser = async (username, password) => {
       { headers: { 'Content-Type': 'application/json' } }
     );
     // Log response details for debugging
-    console.log('Full JWT response (raw):', response);
-    console.log('Response.data type:', typeof response.data);
-    console.log('Response.data keys:', Object.keys(response.data));
-    console.log('Full JWT response (stringified):', JSON.stringify(response.data, null, 2));
+    // console.log('Full JWT response (raw):', response);
+    // console.log('Response.data type:', typeof response.data);
+    // console.log('Response.data keys:', Object.keys(response.data));
+    // console.log('Full JWT response (stringified):', JSON.stringify(response.data, null, 2));
 
     // Extract token
     const token = response.data.token;
@@ -153,7 +153,7 @@ export const loginUser = async (username, password) => {
         console.warn('User ID not found in decoded JWT. Decoded structure:', JSON.stringify(decoded, null, 2));
         throw new Error('User ID not found in JWT payload.');
       }
-      console.log('Extracted user_id from decoded JWT:', userId);
+      // console.log('Extracted user_id from decoded JWT:', userId);
     } catch (decodeError) {
       console.error('JWT decoding failed:', {
         message: decodeError.message,

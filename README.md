@@ -9,7 +9,7 @@ Key Learnings:
 - Client-side cart/wishlist management.
 - Protected routes and order dashboard.
 
-Live Demo: [Link to deployed site, e.g., Vercel/Netlify]
+Live Demo: [[Link to deployed site, e.g., Vercel/Netlify](https://download-store-gamma.vercel.app/)]
 Screenshot: ![Homepage](path/to/homepage-screenshot.png)
 
 ## Tech Stack
@@ -58,4 +58,4 @@ Screenshot: ![Homepage](path/to/homepage-screenshot.png)
 - Enhance design (e.g., more responsive images).
 - Tests with Jest.
 
-Contributions welcome! Built by Stefan Grobler for learning purposes.
+Built by Stefan Grobler for learning purposes.

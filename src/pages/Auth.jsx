@@ -6,8 +6,8 @@ import './Auth.css';
 
 export default function Auth({ handleLogin, handleSignup, handleLogout, isLoggedIn, userName }) {
   const [logInData, setLoginData] = useState({
-    loginUsername: '',
-    loginPassword: '',
+    loginUsername: 'DemoUser',
+    loginPassword: 'demouserpassword',
   });
   const [signUpData, setSignUpData] = useState({
     signupName: '',
@@ -122,6 +122,7 @@ export default function Auth({ handleLogin, handleSignup, handleLogout, isLogged
                     placeholder="Enter password"
                     onChange={handleLoginChange}
                     required
+                    defaultValue="DemoUserPassword"
                   />
                 </div>
                 <button type="submit" className="submit-btn">Login</button>
