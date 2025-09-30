@@ -9,15 +9,15 @@ import './Checkout.css';
 export default function Checkout({ setCart, handleRemoveItem }) {
   const [localCart, setLocalCart] = useState([]);
   const [billingDetails, setBillingDetails] = useState({
-    first_name: '',
-    last_name: '',
-    email: '',
-    phone: '',
-    address_1: '',
-    city: '',
-    state: '',
-    postcode: '',
-    country: '',
+    first_name: 'Demo',
+    last_name: 'User',
+    email: 'demouser@user.co.za',
+    phone: '0712345678',
+    address_1: 'demo street 123',
+    city: 'Demotown',
+    state: 'demostate',
+    postcode: '68878',
+    country: 'South Africa',
   });
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();

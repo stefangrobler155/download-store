@@ -8,6 +8,7 @@
   background: var(--dark-bg);
   color: var(--light-text);
   font-family: var(--font-body);
+  min-height: 90vh;
 }
 
 /* Welcome message */

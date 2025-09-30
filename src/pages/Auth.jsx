@@ -7,7 +7,7 @@ import './Auth.css';
 export default function Auth({ handleLogin, handleSignup, handleLogout, isLoggedIn, userName }) {
   const [logInData, setLoginData] = useState({
     loginUsername: 'DemoUser',
-    loginPassword: 'demouserpassword',
+    loginPassword: 'demouserloginsfgweb',
   });
   const [signUpData, setSignUpData] = useState({
     signupName: '',
