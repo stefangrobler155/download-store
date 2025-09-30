@@ -109,10 +109,10 @@ export default function Checkout({ setCart, handleRemoveItem }) {
           },
         }
       );
-      console.log('Full response object:', response);
-      console.log('Order response:', JSON.stringify(response.data, null, 2));
-      console.log('Order customer_id:', response.data.customer_id);
-      console.log('Order downloads:', response.data.downloads || 'No downloads field');
+      // console.log('Full response object:', response);
+      // console.log('Order response:', JSON.stringify(response.data, null, 2));
+      // console.log('Order customer_id:', response.data.customer_id);
+      // console.log('Order downloads:', response.data.downloads || 'No downloads field');
 
       if (response.data.id && response.data.status !== 'failed') {
         localStorage.removeItem('cart');

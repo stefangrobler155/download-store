@@ -3,6 +3,9 @@
     min-height: 100vh;
     padding: var(--space-lg) var(--space-md);
 }
+.wishlist-page > p {
+  padding-block: 1rem;
+}
 .page-title {
   font-size: var(--text-heading);
   font-weight: var(--weight-semibold);

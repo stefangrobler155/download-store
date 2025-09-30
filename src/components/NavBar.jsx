@@ -32,7 +32,7 @@ export default function NavBar({ cartItem, wishlist, handleLogout, isLoggedIn })
           
           {wishlist.length > 0 && (
               <li className="nav-item">
-                <Link className="nav-link" to="/wishlist">
+                <Link className="nav-link" to="/wishlist" onClick={() => setIsMenuOpen(false)}>
                   <FaHeart className="icon" /> Wishlist ({wishlist.length})
                 </Link>
               </li>
